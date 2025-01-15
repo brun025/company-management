@@ -41,6 +41,7 @@ Aplicação full stack para gerenciamento de empresas com autenticação JWT, de
 ```bash
 git clone <repository-url>
 cd company-management
+cp .env.example .env
 ```
 
 1. Execute com Docker Compose:
