@@ -1,0 +1,88 @@
+<div class="p-6">
+  <h2 class="text-xl font-semibold mb-6">
+    {{ isEditing ? 'COMPANY.EDIT' : 'COMPANY.NEW' | translate }}
+  </h2>
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="space-y-4">
+      <div>
+        <label class="block text-sm font-medium text-gray-700">{{'COMPANY.FORM.NAME' | translate}}</label>
+        <input
+          type="text"
+          formControlName="name"
+          class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+        <span class="text-sm text-red-600" *ngIf="form.get('name')?.errors?.['required'] && form.get('name')?.touched">
+          {{'COMPANY.VALIDATION.REQUIRED' | translate}}
+        </span>
+      </div>
+
+      <div>
+        <label class="block text-sm font-medium text-gray-700">{{'COMPANY.FORM.CNPJ' | translate}}</label>
+        <input
+          type="text"
+          formControlName="cnpj"
+          mask="00.000.000/0000-00"
+          [validation]="true"
+          class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+        <span class="text-sm text-red-600" *ngIf="form.get('cnpj')?.errors?.['required'] && form.get('cnpj')?.touched">
+          {{'COMPANY.FORM.REQUIRED' | translate}}
+        </span>
+        <span class="text-sm text-red-600" *ngIf="form.get('cnpj')?.errors?.['mask'] && form.get('cnpj')?.touched">
+          {{'COMPANY.VALIDATION.INVALID_CNPJ' | translate}}
+        </span>
+      </div>
+
+      <div>
+        <label class="block text-sm font-medium text-gray-700">{{'COMPANY.FORM.ADDRESS' | translate}}</label>
+        <input
+          type="text"
+          formControlName="address"
+          class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+        <span class="text-sm text-red-600" *ngIf="form.get('address')?.errors?.['required'] && form.get('address')?.touched">
+          {{'COMPANY.FORM.REQUIRED' | translate}}
+        </span>
+      </div>
+
+      <div>
+        <label class="block text-sm font-medium text-gray-700">{{'COMPANY.FORM.PHONE' | translate}}</label>
+        <input
+          type="text"
+          formControlName="phone"
+          mask="(00) 00000-0000"
+          class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+        <span class="text-sm text-red-600" *ngIf="form.get('phone')?.errors?.['required'] && form.get('phone')?.touched">
+          {{'COMPANY.FORM.REQUIRED' | translate}}
+        </span>
+      </div>
+
+      <div>
+        <label class="block text-sm font-medium text-gray-700">{{'COMPANY.FORM.EMAIL' | translate}}</label>
+        <input
+          type="email"
+          formControlName="email"
+          class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+        <span class="text-sm text-red-600" *ngIf="form.get('email')?.errors?.['required'] && form.get('email')?.touched">
+          {{'COMPANY.FORM.REQUIRED' | translate}}
+        </span>
+        <span class="text-sm text-red-600" *ngIf="form.get('email')?.errors?.['email'] && form.get('email')?.touched">
+          {{'COMPANY.VALIDATION.INVALID_EMAIL' | translate}}
+        </span>
+      </div>
+    </div>
+
+    <div class="mt-6 flex justify-end space-x-4">
+      <button
+        type="button"
+        (click)="dialogRef.close()"
+        class="px-4 py-2 text-gray-600 hover:text-gray-800">
+        {{'COMPANY.ACTIONS.CANCEL' | translate}}
+      </button>
+      <button
+        type="submit"
+        [disabled]="!form.valid || submitting"
+        class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 disabled:bg-gray-400">
+        {{ (isEditing ? 'COMPANY.ACTIONS.UPDATE' : 'COMPANY.ACTIONS.SAVE') | translate }}
+      </button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,63 @@
+{
+    "LOGIN": {
+        "FORM": {
+            "PASSWORD": "Senha",
+            "EMAIL": "Email"
+        },
+        "ACTIONS": {
+            "ENTER": "Entrar"
+        },
+        "VALIDATION": {
+            "REQUIRED": "Campo obrigatório",
+            "INVALID_PASSWORD": "Telefone inválido",
+            "INVALID_EMAIL": "Email inválido"
+        },
+        "MESSAGES": {
+            "LOGIN_SUCCESS": "Login realizado com sucesso!",
+            "LOGIN_ERROR": "Email ou senha inválidos"
+        }
+    },
+    "COMPANY": {
+        "TITLE": "Empresas",
+        "BUSINESS": "Gestão de Empresas",
+        "NEW": "Nova Empresa",
+        "EDIT": "Editar Empresa",
+        "TABLE_ACTIONS": "Ações",
+        "FORM": {
+            "NAME": "Nome",
+            "CNPJ": "CNPJ",
+            "ADDRESS": "Endereço",
+            "PHONE": "Telefone",
+            "EMAIL": "Email"
+        },
+        "ACTIONS": {
+            "EDIT": "Editar",
+            "DELETE": "Excluir",
+            "SAVE": "Salvar",
+            "CANCEL": "Cancelar",
+            "UPDATE": "Atualizar"
+        },
+        "VALIDATION": {
+            "REQUIRED": "Campo obrigatório",
+            "INVALID_CNPJ": "CNPJ inválido",
+            "INVALID_PHONE": "Telefone inválido",
+            "INVALID_EMAIL": "Email inválido"
+        },
+        "MESSAGES": {
+            "CREATE_SUCCESS": "Empresa criada com sucesso",
+            "UPDATE_SUCCESS": "Empresa atualizada com sucesso",
+            "DELETE_SUCCESS": "Empresa excluída com sucesso",
+            "ERROR": "Ocorreu um erro",
+            "CONFIRM_DELETE": "Deseja realmente excluir a empresa"
+        }
+    },
+    "COMMON": {
+        "LOGOUT": "Sair",
+        "LOADING": "Carregando...",
+        "NO_RESULTS": "Nenhum resultado encontrado",
+        "CONFIRM": "Confirmar",
+        "DELETE_CONFIRM": "Confirmar exclusão",
+        "CANCEL": "Cancelar",
+        "ERROR_LOADING_DATA": "Erro ao carregar dados"
+    }
+}

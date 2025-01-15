@@ -1,0 +1,63 @@
+{
+    "LOGIN": {
+        "FORM": {
+            "PASSWORD": "Password",
+            "EMAIL": "Email"
+        },
+        "ACTIONS": {
+            "ENTER": "Enter"
+        },
+        "VALIDATION": {
+            "REQUIRED": "Campo obrigatório",
+            "INVALID_PASSWORD": "Invalid password",
+            "INVALID_EMAIL": "Invalid email"
+        },
+        "MESSAGES": {
+            "LOGIN_SUCCESS": "Login successfully!",
+            "LOGIN_ERROR": "Invalid email or password"
+        }
+    },
+    "COMPANY": {
+        "TITLE": "Companies",
+        "BUSINESS": "Business Management",
+        "NEW": "New Company",
+        "EDIT": "Edit Company",
+        "TABLE_ACTIONS": "Actions",
+        "FORM": {
+            "NAME": "Name",
+            "CNPJ": "CNPJ",
+            "ADDRESS": "Address",
+            "PHONE": "Phone",
+            "EMAIL": "Email"
+        },
+        "ACTIONS": {
+            "EDIT": "Edit",
+            "DELETE": "Delete",
+            "SAVE": "Save",
+            "CANCEL": "Cancel",
+            "UPDATE": "Update"
+        },
+        "VALIDATION": {
+            "REQUIRED": "Required field",
+            "INVALID_CNPJ": "Invalid CNPJ",
+            "INVALID_PHONE": "Invalid phone",
+            "INVALID_EMAIL": "Invalid email"
+        },
+        "MESSAGES": {
+            "CREATE_SUCCESS": "Company created successfully",
+            "UPDATE_SUCCESS": "Company updated successfully",
+            "DELETE_SUCCESS": "Company deleted successfully",
+            "ERROR": "An error occurred",
+            "CONFIRM_DELETE": "Do you really want to delete the company"
+        }
+    },
+    "COMMON": {
+        "LOADING": "Loading...",
+        "LOGOUT": "Logout",
+        "NO_RESULTS": "No results found",
+        "CONFIRM": "Confirm",
+        "DELETE_CONFIRM": "Confirm deletion",
+        "CANCEL": "Cancel",
+        "ERROR_LOADING_DATA": "Error loading data"
+    }
+}
